@@ -1,0 +1,17 @@
+<%= form_with model: [@author, @author.books.build] do |form| %>
+<p>
+	<%= form.text_field :title, class:"form-control", placeholder:"Tytuł" %>
+</p>
+<p>
+	<%= form.text_field :pages, class:"form-control", placeholder:"Ilość stron" %>
+</p>
+<p>
+	<%= form.text_field :year, class:"form-control", placeholder:"Rok" %>
+</p>
+<p>
+	<%= form.text_field :body, class:"form-control", placeholder:"Opis" %>
+</p>
+<p>
+    <%= form.submit %>
+ </p>
+<% end %>
