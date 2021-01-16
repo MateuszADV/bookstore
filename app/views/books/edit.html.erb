@@ -1,1 +1,27 @@
-<h1>test</h1>
+<h1>EDYTUJ KSIĄŻKĘ</h1>
+<%= @book.title %>
+<%= form_with model: @book do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :pages %><br>
+    <%= form.text_field :pages %>
+  </div>
+
+  <div>
+    <%= form.label :year %><br>
+    <%= form.text_field :year %>
+  </div>
+
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -24,8 +24,7 @@
       <th>Ilość stron</th>
       <th>Rok wydania</th>
       <th>Opis</th>
-      <!-- <th> colspan="3"></th> -->
-      <th></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
   <% @author.books.each do |book| %>
@@ -34,7 +33,8 @@
   		<td><%= book.pages %></td>
   		<td><%= book.year %></td>
   		<td><%= book.body %></td>
-      <td><%= link_to 'Edit', books_edit_path(@book) %></td>
+      <td><%= link_to 'Show', author_book_path(book) %></td>
+      <td><%= link_to 'Edit', edit_author_book_path(book) %></td>
   	</tr>
   	<% end %>
 </table>

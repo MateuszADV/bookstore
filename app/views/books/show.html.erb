@@ -1,0 +1,16 @@
+<h2> TEST SHOW </h2>
+<div class="jumbotron">
+  <h1 class="display-4"><%= @book.title %></h1>
+  <hr class="my-4">
+  <p>
+  	<strong>Wiek</strong>
+  	<%= @book.pages %>
+  </p>
+  <p>
+  	<strong>Rok wydania</strong>
+  	<%= @book.year %>
+  </p>
+  
+  <%= link_to 'Edit', edit_book_path(@book), class:"btn btn-secondary" %> 
+  <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+</div>
