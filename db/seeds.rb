@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# 200.times do
+# 	name = Faker::Name.first_name
+# 	last_name = Faker::Name.unique.last_name
+# 	Author.create(name: name, last_name: last_name)
+# end
+
+200.times do
+	book_title = Faker::Book.title
+	book_pages = Faker::Number.within(range: 100..1000)
+	book_author_id = rand(2..202)
+	Book.create(title:book_title, pages:book_pages, author_id:book_author_id)
+end
