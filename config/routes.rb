@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resources :books
   end
   resources :books
+  mount ReportsKit::Engine, at: '/'
+  
 end
